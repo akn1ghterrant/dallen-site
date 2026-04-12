@@ -1,0 +1,35 @@
+---
+const { title = 'Jay Dallen', description = 'Filmmaker based in Los Angeles.' } = Astro.props;
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="site">
+      <a href="/" class="brand">Jay Dallen</a>
+      <ul>
+        <li><a href="/directing">Directing</a></li>
+        <li><a href="/cinematography">Cinematography</a></li>
+        <li><a href="/photography">Photography</a></li>
+        <li><a href="/writing">Writing</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <main><slot /></main>
+    <footer class="site">
+      <span>Los Angeles</span>
+      <a href="mailto:jay@dallen.com">jay@dallen.com</a>
+    </footer>
+  </div>
+</body>
+</html>
